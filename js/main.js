@@ -76,3 +76,8 @@ function handledResultValidation() {
   }
   handlePlayerChange();
 }
+
+function handlePlayerChange() {
+  currentPlayer = currentPlayer === "X" ? "O" : "X";
+  statusDisplay.innerHTML = currentPlayerTurn();
+}
