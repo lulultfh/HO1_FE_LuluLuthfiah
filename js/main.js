@@ -31,3 +31,8 @@ function handleCellClick(clickedCellEvent) {
   handleCellPlayed(clickedCell, clickedCellIndex);
   handledResultValidation();
 }
+
+function handleCellPlayed(clickedCell, clickedCellIndex) {
+  gameState[clickedCellIndex] = currentPlayer;
+  clickedCell.innerHTML = currentPlayer;
+}
