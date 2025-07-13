@@ -81,3 +81,11 @@ function handlePlayerChange() {
   currentPlayer = currentPlayer === "X" ? "O" : "X";
   statusDisplay.innerHTML = currentPlayerTurn();
 }
+
+function handleRestartGame() {
+  gameActive = true;
+  currentPlayer = "X";
+  gameState = ["", "", "", "", "", "", "", "", ""];
+  statusDisplay.innerHTML = currentPlayerTurn();
+  document.querySelectorAll(".cell").forEach((cell) => (cell.innerHTML = ""));
+}
